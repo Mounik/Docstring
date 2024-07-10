@@ -2,8 +2,6 @@ import os
 
 dossier = "dossier_test"
 
-if os.path.exists(dossier):
-  os.rmdir(dossier)
-else:
-  os.mkdir(dossier)
-
+# Create a directory named 'dossier_test' if it does not already exist.
+# If the directory already exists, do nothing (because of 'exist_ok=True').
+os.makedirs(dossier, exist_ok=True)
